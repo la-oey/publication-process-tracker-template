@@ -2,7 +2,7 @@
 
 Table for tracking journals submitted to, submission times, manuscript version, and other details. Will eventually add functions that automatically analyze and visualize your submission data.
 
-![] (what-it-looks-like.png)
+![](what-it-looks-like.png)
 
 -------------------
 
