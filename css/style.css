@@ -1,0 +1,28 @@
+body {
+    background-color: white;
+    font-size: 18px;
+    font-family: arial;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+table, tr, td {
+    border: 2px black solid;
+    padding: 5px;
+}
+
+img {
+    width: 22px;
+    height: 28px;
+}
+
+.header {
+    font-weight: bold;
+    color: white;
+    background-color: black;
+}
