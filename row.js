@@ -4,7 +4,16 @@ function fillCell(feat){
 
 function fillFileCell(feat){
 	if(feat != "N/A" & feat != ""){
-		return fillCell("<a href='files/" + feat + "'><img src='img/pdf.png'></a>");
+		if(Array.isArray(feat)){
+			let cell = "";
+			for(let i=0; i<feat.length; i++){
+				cell += "<a href='files/" + feat[i] + "'><img src='img/pdf.png'></a>";
+				cell += "<br>";
+			}
+			return fillCell(cell);
+		} else{
+			return fillCell("<a href='files/" + feat + "'><img src='img/pdf.png'></a>");
+		}
 	} else{
 		return fillCell(feat);
 	}
@@ -18,10 +27,10 @@ function fillRow(observation){
 			r = r + fillCell(observation[o]);
 		}
 	}
-	r = r + fillFileCell(observation["file"]);
-	r = r + fillFileCell(observation["cover_letter"]);
-	r = r + fillFileCell(observation["review"]);
-	r = r + "</tr>";
+	r += fillFileCell(observation["file"]);
+	r += fillFileCell(observation["cover_letter"]);
+	r += fillFileCell(observation["review"]);
+	r += "</tr>";
 	$("#dat").append(r);
 }
 
